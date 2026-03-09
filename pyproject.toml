@@ -1,0 +1,24 @@
+[project]
+name = "network-asset-manager"
+version = "0.1.0"
+description = "Object-Oriented infrastructure asset tracking"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "numpy>=2.4.2",
+    "pandas>=3.0.1",
+    "python-dotenv>=1.2.2",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+manage = "asset_manager:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# --- ADD THIS BLOCK ---
+[tool.hatch.build.targets.wheel]
+packages = ["."]
